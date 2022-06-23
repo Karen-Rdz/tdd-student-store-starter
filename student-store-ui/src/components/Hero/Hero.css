@@ -1,0 +1,22 @@
+.hero {
+    background: green;
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px;
+}
+.hero-sub {
+    background: rgb(160, 232, 160);
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}

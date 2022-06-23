@@ -1,0 +1,23 @@
+.about {
+    background: rgb(206, 255, 211);
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.contact {
+    background: rgb(204, 225, 253);
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}

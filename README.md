@@ -10,7 +10,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 
 #### Core Features
 
-- [ ] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
+- [x] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
 - [ ] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
 - [ ] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
 - [ ] User can search for products.
@@ -97,34 +97,34 @@ The following specifications were met on the Express backend and the React front
 
 **Navbar.jsx**
 
-  - [ ] Should render JSX that is wrapped by a `nav` element with a `className` of `navbar`
+  - [x] Should render JSX that is wrapped by a `nav` element with a `className` of `navbar`
   - [ ] Should render the `Logo` component that links to the `/` route when clicked
 
 **Logo.jsx**
 
-  - [ ] Should render JSX that is wrapped by a `div` element with a `className` of `logo`
+  - [x] Should render JSX that is wrapped by a `div` element with a `className` of `logo`
   - [ ] Should use the `Link` component from `react-router-dom` to link to the home route (`/`) when clicked
 
 **Home.jsx**
 
-  - [ ] Should render JSX that is wrapped by a `div` element with a `className` of `home`
+  - [x] Should render JSX that is wrapped by a `div` element with a `className` of `home`
   - [ ] Should accept **at least** the following props:
     - `products` - an array of product objects
     - `handleAddItemToCart` - handler function defined in the `App.jsx` component
     - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
-  - [ ] Should render the `Hero` component
-  - [ ] Should render the `ProductGrid` component
+  - [x] Should render the `Hero` component
+  - [x] Should render the `ProductGrid` component
 
 **Hero.jsx**
 
-  - [ ] Should render JSX that is wrapped by a `div` element with a `className` of `hero`
-  - [ ] Should display an intro message inside an element with the `className` of `intro`. That message should contain the text `"Welcome!"` somewhere within it.
+  - [x] Should render JSX that is wrapped by a `div` element with a `className` of `hero`
+  - [x] Should display an intro message inside an element with the `className` of `intro`. That message should contain the text `"Welcome!"` somewhere within it.
   - [ ] Should render a hero image inside an `img` tag with the `className` of `hero-img`.
 
 **ProductGrid.jsx**
 
-  - [ ] Should render JSX that is wrapped by a `div` element with a `className` of `product-grid`
-  - [ ] Should accept **at least** the following props:
+  - [x] Should render JSX that is wrapped by a `div` element with a `className` of `product-grid`
+  - [x] Should accept **at least** the following props:
     - `products` - an array of product objects
     - `handleAddItemToCart` - handler function defined in the `App.jsx` component
     - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
@@ -159,15 +159,15 @@ The following specifications were met on the Express backend and the React front
 
 **ProductCard.jsx**
 
-  - [ ] Should render JSX that is wrapped by a `div` element with a `className` of `product-card`
-  - [ ] Should accept **at least** the following props:
+  - [x] Should render JSX that is wrapped by a `div` element with a `className` of `product-card`
+  - [x] Should accept **at least** the following props:
     - `product` - a product object
     - `productId` - a `number` representing the `id` of the product
     - `quantity` - the quantity for this product found in the `shoppingCart`
     - `handleAddItemToCart` - handler function
     - `handleRemoveItemToCart` - handler function
     - `showDescription` - boolean
-  - [ ] Should render the `name` of the product inside an element with the `className` of `product-name`
+  - [x] Should render the `name` of the product inside an element with the `className` of `product-name`
   - [ ] Should render the `price` of the product inside an element with the `className` of `product-price`. The price should formatted so that it starts with a `$`, and has **at least one** integer digit, along with **exactly two** decimal digits. Examples - `$22.99`, `$860.20`, and `$0.50`
   - [ ] If the `showDescription` prop is set to `true`, it should render the `description` of the product inside an element with the `className` of `product-description`.
   - [ ] Should render an `img` element for the product:
