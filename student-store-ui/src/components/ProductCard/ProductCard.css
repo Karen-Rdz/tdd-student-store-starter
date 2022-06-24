@@ -1,5 +1,6 @@
 .product-card{
     height: 450px;
+    max-width: 300px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -9,6 +10,7 @@
 .productImage{
     height: 200px;
     width: 100%;
+    /* max-width: 400px; */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
