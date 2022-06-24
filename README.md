@@ -14,7 +14,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 - [x] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
 - [x] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
 - [x] User can search for products.
-- [ ] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
+- [x] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
 - [ ] User can click to expand the shopping cart in the left navigation.
 - [ ] User can click the '+' button on a product cart to increment that product in the shopping cart.
 - [ ] User can click the '-' button on a product cart to increment that product in the shopping cart.
@@ -182,8 +182,8 @@ The following specifications were met on the Express backend and the React front
 
 **Sidebar.jsx**
 
-- [ ] Should render JSX that is wrapped by a `section` element with the `className` of `sidebar`
-- [ ] Should accept **at least** the following props (and probably a few more):
+- [x] Should render JSX that is wrapped by a `section` element with the `className` of `sidebar`
+- [x] Should accept **at least** the following props (and probably a few more):
   - `isOpen` - boolean representing the open/closed state of the Sidebar
   - `shoppingCart` - the active user's cart formatted as an array of objects with `itemId` and `quantity` keys
   - `products` - the array of products fetched from the API
@@ -191,7 +191,7 @@ The following specifications were met on the Express backend and the React front
   - `handleOnCheckoutFormChange` - handler function to update the `checkoutForm` object
   - `handleOnSubmitCheckoutForm` - handler function to submit the user's order to the API
   - `handleOnToggle` - handler function to toggle open/closed `Sidebar` state
-- [ ] It should always render a `button` element with the `className` of `toggle-button`. When that button is clicked it should change the `isOpen` prop by calling the `handleOnToggle` prop.
+- [x] It should always render a `button` element with the `className` of `toggle-button`. When that button is clicked it should change the `isOpen` prop by calling the `handleOnToggle` prop.
 - [ ] When the sidebar is opened, it should display the `ShoppingCart` and `CheckoutForm` components and should be wider than `350px`.
 - [ ] When the sidebar is closed, it should only render the toggle button and shouldn't be wider than `150px`.
 
@@ -288,20 +288,20 @@ The following specifications were met on the Express backend and the React front
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The labs help me to have an idea of what will be needed on this project. All the concepts were new to me, so the concepts of props and state variables saw in class really help me to get familiarized. However, I would like that on the classes we also see Links adn Routes components, because I think it would have help me a lot.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+If I have more time, I want to complete all the features, like add and remove from the shopping cart and the checkout form, since I beleive there are very common features in this kind of web pages
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+During this week working on this project, I think I organized my time to complete only the core features, so the next time I will plan my time in order to complete every feature. Also, I lost a lot of time on weir errors, so I'm going to try avoid them, doing better code.
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+https://codepath-store-api.herokuapp.com/store
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+A shoutout to everyone to help me on this project, starting from Phineas an Yalika, and my peers, especialy Adelle. Thank you very much!
