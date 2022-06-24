@@ -1,0 +1,15 @@
+.product-card{
+    height: 450px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+}
+
+.productImage{
+    height: 200px;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

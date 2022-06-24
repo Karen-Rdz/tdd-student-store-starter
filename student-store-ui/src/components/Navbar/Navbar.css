@@ -1,11 +1,16 @@
 .navbar {
     width: 100%;
     max-width: 100vw;
-    background: darkblue;
+    background: rgb(42, 42, 79);
     color: white;
     height: 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 var(--side-padding);
+}
+
+.facebook-logo {
+    height: 50px;
+    width: 50px;
 }

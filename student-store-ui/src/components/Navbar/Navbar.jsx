@@ -1,13 +1,13 @@
 import * as React from "react"
 import "./Navbar.css"
 import Logo from "../Logo/Logo"
+import face from "./face.png"
 
 export default function Navbar() {
   return (
     <nav className="navbar">
-      {/* <p>Navbar</p> */}
       <Logo />  
-      <img src="tdd-student-store-starter\face.png" alt="facebook" />
+      <img className="facebook-logo" src={face} alt="facebook" />
       <p>Links </p>
     </nav>
   )

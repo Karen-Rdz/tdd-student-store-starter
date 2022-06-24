@@ -8,15 +8,14 @@ import "./App.css"
 import axios from 'axios'
 
 export default function App() {
-  function handleAddItemToCart(){
 
-  }
-
-  function handleRemoveItemToCart(){
-
-  }
-
+  const [isFetching, setIsFetching] = React.useState(false)
+  const [error, setError] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false)
+  const [shoppingCart, setShoppingCart] = React.useState([])
+  const [checkoutForm, setCheckoutForm] = React.useState()
   const [products, setProducts] = React.useState([])
+
   React.useEffect( () => {
     async function fetchData() {
       const {data} = await axios('https://codepath-store-api.herokuapp.com/store')
@@ -24,6 +23,26 @@ export default function App() {
     }
     fetchData();
   }, [name])
+
+  const  handleAddItemToCart = (id) => {
+
+  }
+
+  const handleRemoveItemToCart = (id) => {
+
+  }
+
+  const handleOnToggle = () => {
+
+  }
+
+  const handleOnCheckoutFormChange = () => {
+
+  }
+
+  const handleOnSubmitCheckoutForm = () => {
+
+  }
 
   return (
     <div className="app">
@@ -34,7 +53,6 @@ export default function App() {
           products={products}
           handleAddItemToCart={handleAddItemToCart}
           handleRemoveItemToCart={handleRemoveItemToCart}/>
-          {/* {products.map(p => <p key={p.name}>{p.name}</p>)} */}
           <Sidebar />
           <Footer />
         </main>
