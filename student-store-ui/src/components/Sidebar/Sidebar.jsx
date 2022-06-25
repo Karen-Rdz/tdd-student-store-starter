@@ -3,6 +3,7 @@ import "./Sidebar.css";
 
 export default function Sidebar({
   isOpen,
+  widthSideBar,
   shoppingCart,
   products,
   checkoutForm,
@@ -11,10 +12,10 @@ export default function Sidebar({
   handleOnToggle,
 }) {
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={{ width: widthSideBar }}>
       <button className="toggle-button" onClick={handleOnToggle}>
         {" "}
-        Side Bar{" "}
+        Open{" "}
       </button>
     </div>
   );

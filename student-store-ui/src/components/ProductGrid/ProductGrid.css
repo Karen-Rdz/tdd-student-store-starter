@@ -1,5 +1,6 @@
 .product-grid {
-    margin: 40px;
+    flex-direction: row;
+    margin: 80px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     column-gap: 10px;

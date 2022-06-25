@@ -12,10 +12,11 @@ import NotFound from "../NotFound/NotFound";
 export default function App() {
   const [isFetching, setIsFetching] = React.useState(false);
   const [error, setError] = React.useState(false);
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(true);
   const [shoppingCart, setShoppingCart] = React.useState([]);
   const [checkoutForm, setCheckoutForm] = React.useState();
   const [products, setProducts] = React.useState([]);
+  let [widthSideBar, setWidth] = React.useState(80);
 
   React.useEffect(() => {
     async function fetchData() {
@@ -33,6 +34,11 @@ export default function App() {
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen);
+    if (isOpen == true) {
+      setWidth(300);
+    } else {
+      setWidth(80);
+    }
   };
 
   const handleOnCheckoutFormChange = (id) => {};
@@ -46,6 +52,7 @@ export default function App() {
           <Navbar />
           <Sidebar
             isOpen={isOpen}
+            widthSideBar={widthSideBar}
             shoppingCart={shoppingCart}
             products={products}
             checkoutForm={checkoutForm}

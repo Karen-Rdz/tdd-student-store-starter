@@ -29,20 +29,20 @@ export default function ProductGrid({
   filterProducts(products, category, search);
 
   return (
-    <section className="sidebar">
-      <div className="product-grid">
-        {filteredProducts.map((product) => (
-          <ProductCard
-            key={product.name}
-            product={product}
-            productId={product.id}
-            quantity={1}
-            handleAddItemToCart={handleAddItemToCart}
-            handleRemoveItemToCart={handleRemoveItemToCart}
-            showDescription={false}
-          />
-        ))}
-      </div>
-    </section>
+    // <section className="sidebar">
+    <div className="product-grid">
+      {filteredProducts.map((product) => (
+        <ProductCard
+          key={product.name}
+          product={product}
+          productId={product.id}
+          quantity={1}
+          handleAddItemToCart={handleAddItemToCart}
+          handleRemoveItemToCart={handleRemoveItemToCart}
+          showDescription={false}
+        />
+      ))}
+    </div>
+    // </section>
   );
 }
