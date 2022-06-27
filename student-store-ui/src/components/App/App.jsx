@@ -13,7 +13,7 @@ export default function App() {
   const [isFetching, setIsFetching] = React.useState(false);
   const [error, setError] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(true);
-  const [shoppingCart, setShoppingCart] = React.useState([]);
+  const [shoppingCart, setShoppingCart] = React.useState([[0, 0]]);
   const [checkoutForm, setCheckoutForm] = React.useState();
   const [products, setProducts] = React.useState([]);
   let [widthSideBar, setWidth] = React.useState(80);
@@ -28,7 +28,20 @@ export default function App() {
     fetchData();
   }, [name]);
 
-  const handleAddItemToCart = (id) => {};
+  const handleAddItemToCart = (productId) => {
+    // products.map((product) => {
+    // if (product.id == productId) {
+    // console.log(shoppingCart + [productId, 1]);
+    // setShoppingCart(shoppingCart + [productId, 1]);
+    // console.log(shoppingCart);
+    // if (!shoppingCart.find([product.id])) {
+    //   setShoppingCart([productId, 1]);
+    // } else {
+    //   <p>Falta cuando ya existe</p>;
+    // }
+    //   }
+    // });
+  };
 
   const handleRemoveItemToCart = (id) => {};
 

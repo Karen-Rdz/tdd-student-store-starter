@@ -50,8 +50,8 @@ The following specifications were met on the Express backend and the React front
   - [x] `error` - a variable used to display a message when something goes wrong with the API requests.
   - [x] `isOpen` - a boolean value representing whether or not the `Sidebar.jsx` is in the open or closed state.
   - [ ] `shoppingCart` - should store state for the active user's shopping cart (items they want to purchase and the quantity of each item).
-    - [ ] Use whatever data type works best here, but make sure the format the `shoppingCart` as an array before passing it to other components.
-    - [ ] When passed down to other components as a prop, it should formatted as an array of objects.
+    - [x] Use whatever data type works best here, but make sure the format the `shoppingCart` as an array before passing it to other components.
+    - [x] When passed down to other components as a prop, it should formatted as an array of objects.
     - [ ] Each object in the array should have two fields:
       - [ ] The `itemId` field should store the `id` of the item being purchased.
       - [ ] The `quantity` field should store a number representing how many of that item the user is purchasing.
@@ -62,13 +62,13 @@ The following specifications were met on the Express backend and the React front
   - [ ] If the request does not complete successfully, or there are no `products` found in the response,
         it should create an error message and store it in the `error` state variable.
 - [ ] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
-  - [ ] Define as many as are needed.
+  - [x] Define as many as are needed.
   - [ ] At minimum, **create these five handlers**:
-    - [ ] The **`handleOnToggle`** function. When called...
-      - [ ] It should toggle the open/closed state of the `Sidebar`.
+    - [x] The **`handleOnToggle`** function. When called...
+      - [x] It should toggle the open/closed state of the `Sidebar`.
     - [ ] The **`handleAddItemToCart`** function. When called...
-      - [ ] It should accept a single argument - `productId`
-      - [ ] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
+      - [x] It should accept a single argument - `productId`
+      - [x] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
       - [ ] If it does exist, it should increase the quantity by `1`.
       - [ ] It should add the price of the product to the total price of the `shoppingCart`.
     - [ ] The **`handleRemoveItemFromCart`** function. When called...
@@ -197,7 +197,7 @@ The following specifications were met on the Express backend and the React front
 
 **ShoppingCart.jsx**
 
-- [ ] Should render JSX that is wrapped by a `div` element with the `className` of `shopping-cart`
+- [x] Should render JSX that is wrapped by a `div` element with the `className` of `shopping-cart`
 - [ ] Should accept **at least** the following props (and probably a few more):
   - `isOpen` - boolean representing the open/closed state of the Sidebar
   - `products` - the array of products fetched from the API
@@ -243,20 +243,20 @@ The following specifications were met on the Express backend and the React front
 
 **Server** - Create an Express server
 
-- [ ] Wire up the appropriate middleware and error handlers in the `app.js` file
-- [ ] Create a single `GET` request handler at the `/` endpoint. It should respond to all `GET` requests with a JSON object and a `200` status code. The JSON response should contain a single key of `ping` that stores the string value: `pong`. For example: `{ "ping": "pong" }`.
-- [ ] Have a `server.js` file that starts the app by listening on port `3001`.
+- [x] Wire up the appropriate middleware and error handlers in the `app.js` file
+- [x] Create a single `GET` request handler at the `/` endpoint. It should respond to all `GET` requests with a JSON object and a `200` status code. The JSON response should contain a single key of `ping` that stores the string value: `pong`. For example: `{ "ping": "pong" }`.
+- [x] Have a `server.js` file that starts the app by listening on port `3001`.
 
 **Models** - The API should use a `Store` model that handles the following
 
-- [ ] List all products currently in the `db.json` file
-- [ ] Fetch a single product by its id
+- [x] List all products currently in the `db.json` file
+- [x] Fetch a single product by its id
 - [ ] Create a purchase order
 
 **Routes** - The API should contain a route mounted at the `/store` endpoint
 
-- [ ] It should respond to `GET` requests to `/store` with an array of all products in the store in this format: `{ "products": products }`
-- [ ] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
+- [x] It should respond to `GET` requests to `/store` with an array of all products in the store in this format: `{ "products": products }`
+- [x] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
 - [ ] It should allow `POST` requests to the `/store` endpoint:
   - [ ] The endpoint should create purchase orders for users and save them to the `db.json` file
   - [ ] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
