@@ -1,12 +1,12 @@
 const express = require('express')
 const morgan = require('morgan')
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 const storeRoutes = require('./routes/Store.js')
 
 const products = require('./data/db.json')
 const app = express()
 
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 app.use(morgan('tiny'))
 
 app.get('/store', storeRoutes)

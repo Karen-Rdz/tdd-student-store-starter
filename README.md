@@ -16,8 +16,8 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 - [x] User can search for products.
 - [x] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
 - [x] User can click to expand the shopping cart in the left navigation.
-- [ ] User can click the '+' button on a product cart to increment that product in the shopping cart.
-- [ ] User can click the '-' button on a product cart to increment that product in the shopping cart.
+- [x] User can click the '+' button on a product cart to increment that product in the shopping cart.
+- [x] User can click the '-' button on a product cart to decrement that product in the shopping cart.
 - [ ] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] User can check out, and can view receipt upon completion.
 
@@ -52,9 +52,9 @@ The following specifications were met on the Express backend and the React front
   - [ ] `shoppingCart` - should store state for the active user's shopping cart (items they want to purchase and the quantity of each item).
     - [x] Use whatever data type works best here, but make sure the format the `shoppingCart` as an array before passing it to other components.
     - [x] When passed down to other components as a prop, it should formatted as an array of objects.
-    - [ ] Each object in the array should have two fields:
-      - [ ] The `itemId` field should store the `id` of the item being purchased.
-      - [ ] The `quantity` field should store a number representing how many of that item the user is purchasing.
+    - [x] Each object in the array should have two fields:
+      - [x] The `itemId` field should store the `id` of the item being purchased.
+      - [x] The `quantity` field should store a number representing how many of that item the user is purchasing.
   - [ ] `checkoutForm` - the user's information that will be sent to the API when they checkout.
 - [ ] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
   - [x] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
@@ -69,13 +69,13 @@ The following specifications were met on the Express backend and the React front
     - [ ] The **`handleAddItemToCart`** function. When called...
       - [x] It should accept a single argument - `productId`
       - [x] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
-      - [ ] If it does exist, it should increase the quantity by `1`.
+      - [x] If it does exist, it should increase the quantity by `1`.
       - [ ] It should add the price of the product to the total price of the `shoppingCart`.
-    - [ ] The **`handleRemoveItemFromCart`** function. When called...
-      - [ ] It should accept a single argument - `productId`
-      - [ ] It should decrease the quantity of the item in the `shoppingCart` by `1`, but only if it already exists.
-      - [ ] If it doesn't exist, the function should do nothing.
-      - [ ] If the new quantity is `0`, it should remove the item from the `shoppingCart`
+    - [x] The **`handleRemoveItemFromCart`** function. When called...
+      - [x] It should accept a single argument - `productId`
+      - [x] It should decrease the quantity of the item in the `shoppingCart` by `1`, but only if it already exists.
+      - [x] If it doesn't exist, the function should do nothing.
+      - [x] If the new quantity is `0`, it should remove the item from the `shoppingCart`
     - [ ] The **`handleOnCheckoutFormChange`** function. When called...
       - [ ] It should receive two arguments:
         - [ ] `name` - the `name` attribute of the input being updated
@@ -198,16 +198,16 @@ The following specifications were met on the Express backend and the React front
 **ShoppingCart.jsx**
 
 - [x] Should render JSX that is wrapped by a `div` element with the `className` of `shopping-cart`
-- [ ] Should accept **at least** the following props (and probably a few more):
+- [x] Should accept **at least** the following props (and probably a few more):
   - `isOpen` - boolean representing the open/closed state of the Sidebar
   - `products` - the array of products fetched from the API
   - `shoppingCart` - the active user's cart formatted as an array of objects with `itemId` and `quantity` keys
-- [ ] For every item in the `shoppingCart`:
-  - [ ] It should display the `name` of the item in an element with the `className` of `cart-product-name`. Remember that items in the `shoppingCart` prop will **only** contain the `itemId` and `quantity` fields. Other props will have to be used to conver the `itemId` field to the `product`'s name.
-  - [ ] It should display the `quantity` of the item in an element with the `className` of `cart-product-quantity`
+- [x] For every item in the `shoppingCart`:
+  - [x] It should display the `name` of the item in an element with the `className` of `cart-product-name`. Remember that items in the `shoppingCart` prop will **only** contain the `itemId` and `quantity` fields. Other props will have to be used to conver the `itemId` field to the `product`'s name.
+  - [x] It should display the `quantity` of the item in an element with the `className` of `cart-product-quantity`
 - [ ] It add up the cost of all items (make sure to use the quantity of the item requested), and render that amount **rounded up to exactly 2 decimal places** inside an element with the `className` of `subtotal`. Make sure it is prefixed with a dollar sign ($)!
 - [ ] It should calculate the cost of taxes on that subtotal (using 8.75% as the tax rate), add that amount to the subtotal, and render the total cost **rounded up to exactly 2 decimal places** inside an element with the `className` of `total-price`. Make sure it is prefixed with a dollar sign ($)!
-- [ ] If no items exist in the `shoppingCart`, it should render this message: `"No items added to cart yet. Start shopping now!"` inside an element with the `className` of `notification`
+- [x] If no items exist in the `shoppingCart`, it should render this message: `"No items added to cart yet. Start shopping now!"` inside an element with the `className` of `notification`
 
 **CheckoutForm.jsx**
 
@@ -259,7 +259,7 @@ The following specifications were met on the Express backend and the React front
 - [x] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
 - [ ] It should allow `POST` requests to the `/store` endpoint:
   - [ ] The endpoint should create purchase orders for users and save them to the `db.json` file
-  - [ ] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
+  - [x] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
     - [ ] The `shoppingCart` field should contain the user's order.
       - [ ] This should be an array of objects.
       - [ ] Each object in the array should have two fields:

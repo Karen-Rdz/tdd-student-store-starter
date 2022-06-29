@@ -13,7 +13,7 @@ export default function App() {
   const [isFetching, setIsFetching] = React.useState(false);
   const [error, setError] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(true);
-  const [shoppingCart, setShoppingCart] = React.useState([[0, 0]]);
+  const [shoppingCart, setShoppingCart] = React.useState([]);
   const [checkoutForm, setCheckoutForm] = React.useState();
   const [products, setProducts] = React.useState([]);
   let [widthSideBar, setWidth] = React.useState(80);
@@ -22,28 +22,46 @@ export default function App() {
     async function fetchData() {
       const { data } = await axios(
         "https://codepath-store-api.herokuapp.com/store"
+        // "http://localhost:30001/store"
       );
       setProducts(data.products);
     }
     fetchData();
-  }, [name]);
+  }, []);
 
-  const handleAddItemToCart = (productId) => {
-    // products.map((product) => {
-    // if (product.id == productId) {
-    // console.log(shoppingCart + [productId, 1]);
-    // setShoppingCart(shoppingCart + [productId, 1]);
-    // console.log(shoppingCart);
-    // if (!shoppingCart.find([product.id])) {
-    //   setShoppingCart([productId, 1]);
-    // } else {
-    //   <p>Falta cuando ya existe</p>;
-    // }
-    //   }
-    // });
+  function handleAddItemToCart(productId) {
+    let handleCart = [...shoppingCart];
+    let index = shoppingCart.findIndex((item) => item.itemId == productId);
+    if (index > -1) {
+      let repeatedProduct = handleCart[index].quantity + 1;
+      const newProuct = {
+        itemId: productId,
+        quantity: repeatedProduct,
+      };
+
+      handleCart[index] = newProuct;
+      setShoppingCart(handleCart);
+    } else if (index == -1) {
+      const newProuct = {
+        itemId: productId,
+        quantity: 1,
+      };
+      setShoppingCart([...shoppingCart, newProuct]);
+    }
+  }
+
+  const handleRemoveItemToCart = (productId) => {
+    let handleCart = [...shoppingCart];
+    let index = shoppingCart.findIndex((item) => item.itemId == productId);
+    if (index > -1) {
+      if (handleCart[index].quantity > 1) {
+        handleCart[index].quantity--;
+      } else {
+        handleCart.splice(index, 1);
+      }
+      setShoppingCart(handleCart);
+    }
   };
-
-  const handleRemoveItemToCart = (id) => {};
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen);
@@ -54,9 +72,9 @@ export default function App() {
     }
   };
 
-  const handleOnCheckoutFormChange = (id) => {};
+  const handleOnCheckoutFormChange = (productId) => {};
 
-  const handleOnSubmitCheckoutForm = (id) => {};
+  const handleOnSubmitCheckoutForm = (productId) => {};
 
   return (
     <div className="app">

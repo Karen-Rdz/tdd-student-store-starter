@@ -10,9 +10,6 @@ export default function ProductCard({
   handleRemoveItemToCart,
   showDescription,
 }) {
-  // let price = product.price
-  // let price = 0
-
   if (product) {
     let description = "";
     if (showDescription == true) {
@@ -34,11 +31,14 @@ export default function ProductCard({
             />
           </Link>
         </div>
-        <button className="add" onClick={handleAddItemToCart(productId)}>
+        <button className="add" onClick={() => handleAddItemToCart(productId)}>
           {" "}
           Add{" "}
         </button>
-        <button className="remove" onClick={handleRemoveItemToCart(productId)}>
+        <button
+          className="remove"
+          onClick={() => handleRemoveItemToCart(productId)}
+        >
           {" "}
           Remove{" "}
         </button>

@@ -1,5 +1,5 @@
 const {storage} = require('../data/storage.js')
-const products = storage.get('products').value();
+const products = storage.get('products');
 
 class Store{
     constructor(){
@@ -13,6 +13,10 @@ class Store{
     static oneProduct(productId){
         const findProduct = products.find(element => element.id == productId);
         return findProduct;
+    }
+
+    static createPuchase (shoppingCart, user){
+        return shoppingCart
     }
 }
 

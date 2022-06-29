@@ -15,7 +15,10 @@ router.get('/store/:productId', function (req, res) {
 })
 
 router.post('/store', function (req, res) {
-    // const names = req.body.names;
+    const shoppingCart = req.body.shoppingCart;
+    const user = req.body.user;
+    const purchase = Store.createPuchase(shoppingCart, user);
+    res.send({purchase})
 })
 
 module.exports = router
