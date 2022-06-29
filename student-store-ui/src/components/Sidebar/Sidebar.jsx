@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./Sidebar.css";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 export default function Sidebar({
   isOpen,
@@ -18,11 +19,24 @@ export default function Sidebar({
         {" "}
         Open{" "}
       </button>
-      <ShoppingCart
-        products={products}
-        isOpen={isOpen}
-        shoppingCart={shoppingCart}
-      />
+      {!isOpen ? (
+        <>
+          <ShoppingCart
+            products={products}
+            isOpen={isOpen}
+            shoppingCart={shoppingCart}
+          />
+          <CheckoutForm
+            isOpen={isOpen}
+            shoppingCart={shoppingCart}
+            checkoutForm={checkoutForm}
+            handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+            handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+          />
+        </>
+      ) : (
+        <p></p>
+      )}
     </div>
   );
 }

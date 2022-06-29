@@ -14,17 +14,18 @@ export default function App() {
   const [error, setError] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(true);
   const [shoppingCart, setShoppingCart] = React.useState([]);
-  const [checkoutForm, setCheckoutForm] = React.useState();
+  const [checkoutForm, setCheckoutForm] = React.useState({});
   const [products, setProducts] = React.useState([]);
   let [widthSideBar, setWidth] = React.useState(80);
 
   React.useEffect(() => {
     async function fetchData() {
-      const { data } = await axios(
-        "https://codepath-store-api.herokuapp.com/store"
-        // "http://localhost:30001/store"
-      );
-      setProducts(data.products);
+      try {
+        const { data } = await axios.get("http://localhost:3001/store");
+        setProducts(data.products);
+      } catch (error) {
+        console.log(error.message);
+      }
     }
     fetchData();
   }, []);
@@ -72,9 +73,23 @@ export default function App() {
     }
   };
 
-  const handleOnCheckoutFormChange = (productId) => {};
+  const handleOnCheckoutFormChange = (name, value) => {
+    if (name == "name") {
+      setCheckoutForm({ ...checkoutForm, name: value });
+    } else {
+      setCheckoutForm({ ...checkoutForm, email: value });
+    }
+  };
 
-  const handleOnSubmitCheckoutForm = (productId) => {};
+  const handleOnSubmitCheckoutForm = () => {
+    axios.post("http://localhost:3001/store", {
+      user: {
+        name: checkoutForm.name,
+        email: checkoutForm.email,
+      },
+      shoppingCart: shoppingCart,
+    });
+  };
 
   return (
     <div className="app">
