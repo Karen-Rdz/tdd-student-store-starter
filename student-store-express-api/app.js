@@ -7,7 +7,7 @@ const products = require('./data/db.json')
 const app = express()
 
 // app.use(bodyParser.json())
-// app.use.json()
+app.use(express.json())
 app.use(morgan('tiny'))
 
 app.use(function(req, res, next) {
@@ -18,6 +18,7 @@ app.use(function(req, res, next) {
 
 app.get('/store', storeRoutes)
 app.get('/store/:productId', storeRoutes)
+app.post('/store/', storeRoutes)
 
 app.get('/', (req, res) => {
     res.status(200).send({"ping": "pong"})

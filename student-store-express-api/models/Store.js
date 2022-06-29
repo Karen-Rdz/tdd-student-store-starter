@@ -16,7 +16,14 @@ class Store{
     }
 
     static createPuchase (shoppingCart, user){
-        return shoppingCart
+        // Try the function on Shopping Cart (create an array and them sum their elements)
+        const subtotal = 0
+        for (let index; index < shoppingCart.length; index++){
+            const item = shoppingCart[index]
+            const product = products.find((element) => element[index].id == item.itemId);
+            subtotal += product.price*item.quantity;
+        }
+        return subtotal;
     }
 }
 
