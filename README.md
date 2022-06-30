@@ -18,7 +18,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 - [x] User can click to expand the shopping cart in the left navigation.
 - [x] User can click the '+' button on a product cart to increment that product in the shopping cart.
 - [x] User can click the '-' button on a product cart to decrement that product in the shopping cart.
-- [ ] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
+- [x] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] User can check out, and can view receipt upon completion.
 
 #### Stretch Features
@@ -205,8 +205,8 @@ The following specifications were met on the Express backend and the React front
 - [x] For every item in the `shoppingCart`:
   - [x] It should display the `name` of the item in an element with the `className` of `cart-product-name`. Remember that items in the `shoppingCart` prop will **only** contain the `itemId` and `quantity` fields. Other props will have to be used to conver the `itemId` field to the `product`'s name.
   - [x] It should display the `quantity` of the item in an element with the `className` of `cart-product-quantity`
-- [ ] It add up the cost of all items (make sure to use the quantity of the item requested), and render that amount **rounded up to exactly 2 decimal places** inside an element with the `className` of `subtotal`. Make sure it is prefixed with a dollar sign ($)!
-- [ ] It should calculate the cost of taxes on that subtotal (using 8.75% as the tax rate), add that amount to the subtotal, and render the total cost **rounded up to exactly 2 decimal places** inside an element with the `className` of `total-price`. Make sure it is prefixed with a dollar sign ($)!
+- [x] It add up the cost of all items (make sure to use the quantity of the item requested), and render that amount **rounded up to exactly 2 decimal places** inside an element with the `className` of `subtotal`. Make sure it is prefixed with a dollar sign ($)!
+- [x] It should calculate the cost of taxes on that subtotal (using 8.75% as the tax rate), add that amount to the subtotal, and render the total cost **rounded up to exactly 2 decimal places** inside an element with the `className` of `total-price`. Make sure it is prefixed with a dollar sign ($)!
 - [x] If no items exist in the `shoppingCart`, it should render this message: `"No items added to cart yet. Start shopping now!"` inside an element with the `className` of `notification`
 
 **CheckoutForm.jsx**
@@ -251,7 +251,7 @@ The following specifications were met on the Express backend and the React front
 
 - [x] List all products currently in the `db.json` file
 - [x] Fetch a single product by its id
-- [ ] Create a purchase order
+- [x] Create a purchase order
 
 **Routes** - The API should contain a route mounted at the `/store` endpoint
 
@@ -270,17 +270,17 @@ The following specifications were met on the Express backend and the React front
     - [ ] When either the `shoppingCart` or `user` fields are missing, it should throw a `400` error.
     - [ ] If there are duplicate items in the `shoppingCart`, it should throw a `400` error.
     - [ ] If either the `quantity` or `itemId` field is missing for any of the items in the `shoppingCart`, a `400` error should be thrown.
-    - [ ] When both are there, it should calculate the total cost of all the items (including quantities), add a `8.75%` tax to the total, and create a new purchase object containing 6 required fields and 1 optional field:
+    - [x] When both are there, it should calculate the total cost of all the items (including quantities), add a `8.75%` tax to the total, and create a new purchase object containing 6 required fields and 1 optional field:
       - **required**:
         - [ ] `id` - the new `id` of the purchase should be equal to one more than the current number of existing purchases
         - [ ] `name` - the name of the user making the purchase
         - [ ] `email` - the email of the user making the purchase
-        - [ ] `order` - the `shoppingCart` value sent in the `POST` request
-        - [ ] `total` - the calculated total of the order
-        - [ ] `createdAt` - a string representation of the date and time when the order was placed
+        - [x] `order` - the `shoppingCart` value sent in the `POST` request
+        - [x] `total` - the calculated total of the order
+        - [x] `createdAt` - a string representation of the date and time when the order was placed
       - **optional**:
         - [ ] `receipt` - text describing the order (what might go on a receipt)
-    - [ ] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
+    - [x] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
 
 ---
 

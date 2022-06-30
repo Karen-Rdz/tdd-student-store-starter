@@ -12,6 +12,7 @@ export default function Sidebar({
   handleOnCheckoutFormChange,
   handleOnSubmitCheckoutForm,
   handleOnToggle,
+  purchase,
 }) {
   return (
     <div className="sidebar" style={{ width: widthSideBar }}>
@@ -25,6 +26,7 @@ export default function Sidebar({
             products={products}
             isOpen={isOpen}
             shoppingCart={shoppingCart}
+            purchase={purchase}
           />
           <CheckoutForm
             isOpen={isOpen}

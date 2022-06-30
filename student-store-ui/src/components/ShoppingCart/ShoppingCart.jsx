@@ -1,13 +1,31 @@
 import * as React from "react";
 import "./ShoppingCart.css";
 
-export default function ShoppingCart({ products, isOpen, shoppingCart }) {
+export default function ShoppingCart({
+  products,
+  isOpen,
+  shoppingCart,
+  purchase,
+}) {
   const [subtotal, setSubtotal] = React.useState(0);
   return (
     <div className="shopping-cart">
       {shoppingCart.length > 0 ? (
         <>
           <ShowInformation shoppingCart={shoppingCart} products={products} />
+          {purchase.purchase ? (
+            <>
+              <p className="subtotal">
+                Subtotal: ${purchase.purchase.subtotal.toFixed(2)}
+              </p>
+              <p className="tax">Tax: ${purchase.purchase.tax.toFixed(2)}</p>
+              <p className="total-price">
+                Total: ${purchase.purchase.total.toFixed(2)}
+              </p>
+            </>
+          ) : (
+            <p>Total: $0</p>
+          )}
         </>
       ) : (
         <p className="notification">No items added to cart yet</p>
@@ -40,12 +58,3 @@ export function ShowInformation(shoppingCart, products) {
     </>
   ));
 }
-
-// export function getSubtotal(subtotal, setSubtotal) {
-//   let subtotal = 0;
-//   costsOnCart.forEach((item) => {
-//     subtotal += item;
-//   });
-//   setSubtotal(subtotal);
-//   return <p className="subtotal">Subtotal: {subtotal}</p>;
-// }

@@ -16,6 +16,7 @@ export default function App() {
   const [shoppingCart, setShoppingCart] = React.useState([]);
   const [checkoutForm, setCheckoutForm] = React.useState({});
   const [products, setProducts] = React.useState([]);
+  const [purchase, setPurchase] = React.useState({});
   let [widthSideBar, setWidth] = React.useState(80);
 
   React.useEffect(() => {
@@ -76,21 +77,24 @@ export default function App() {
   const handleOnCheckoutFormChange = (name, value) => {
     if (name == "name") {
       setCheckoutForm({ ...checkoutForm, name: value });
-    } else {
+    } else if (name == "email") {
       setCheckoutForm({ ...checkoutForm, email: value });
     }
   };
 
   const handleOnSubmitCheckoutForm = () => {
-    axios.post("http://localhost:3001/store", {
-      user: {
-        name: checkoutForm.name,
-        email: checkoutForm.email,
-      },
-      shoppingCart: shoppingCart,
-    });
+    axios
+      .post("http://localhost:3001/store", {
+        user: {
+          name: checkoutForm.name,
+          email: checkoutForm.email,
+        },
+        shoppingCart: shoppingCart,
+      })
+      .then((response) => {
+        setPurchase(response.data.purchase);
+      });
   };
-
   return (
     <div className="app">
       <BrowserRouter>
@@ -105,6 +109,7 @@ export default function App() {
             handleOnCheckoutFormChange={handleOnCheckoutFormChange}
             handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
             handleOnToggle={handleOnToggle}
+            purchase={purchase}
           />
           <Routes>
             <Route

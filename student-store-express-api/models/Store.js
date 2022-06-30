@@ -15,15 +15,34 @@ class Store{
         return findProduct;
     }
 
-    static createPuchase (shoppingCart, user){
-        // Try the function on Shopping Cart (create an array and them sum their elements)
-        const subtotal = 0
-        for (let index; index < shoppingCart.length; index++){
-            const item = shoppingCart[index]
-            const product = products.find((element) => element[index].id == item.itemId);
-            subtotal += product.price*item.quantity;
+    static createPuchase (shoppingCart, user, id){
+        let subtotal = 0
+        let costsOnCart = []
+        shoppingCart.forEach((item) => {
+            products.forEach((element) => {
+              if (element.id == item.itemId) {
+                costsOnCart.push(element.price * item.quantity);
+              }
+            });
+          });
+        costsOnCart.forEach((item) => {
+            subtotal += item;
+        });
+        let tax = subtotal*0.0875
+        let total = subtotal+tax
+        let date = new Date()
+        id += 1;
+        const purchase = {
+            id: id,
+            name: user.name,
+            email: user.email,
+            order: shoppingCart,
+            subtotal: subtotal,
+            tax: tax,
+            total: total,
+            createdAt: date,
         }
-        return subtotal;
+        return {purchase};
     }
 }
 
