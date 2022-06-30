@@ -1,5 +1,6 @@
-const {storage} = require('../data/storage.js')
+const {storage} = require('../data/storage.js');
 const products = storage.get('products');
+const purchases = storage.get('purchases');
 
 class Store{
     constructor(){
@@ -15,13 +16,17 @@ class Store{
         return findProduct;
     }
 
-    static createPuchase (shoppingCart, user, id){
+    static createPuchase (shoppingCart, user){
         let subtotal = 0
         let costsOnCart = []
+        let receipt = [`Showing receipt for ${user.name} available at ${user.email}:`]
         shoppingCart.forEach((item) => {
             products.forEach((element) => {
               if (element.id == item.itemId) {
                 costsOnCart.push(element.price * item.quantity);
+                receipt.push(`${item.quantity} total ${element.name} purchased at a cost of $${element.price.toFixed(2)} 
+                for a total cost of $${(element.price * item.quantity).toFixed(2)
+                } `)
               }
             });
           });
@@ -31,9 +36,11 @@ class Store{
         let tax = subtotal*0.0875
         let total = subtotal+tax
         let date = new Date()
-        id += 1;
+        receipt.push(`Before taxes, the subtotal was: $${subtotal.toFixed(2)}. 
+        The taxes were: $${tax.toFixed(2)}. 
+        The total comes out: $${total.toFixed(2)}. `)
         const purchase = {
-            id: id,
+            id: purchases.length+1,
             name: user.name,
             email: user.email,
             order: shoppingCart,
@@ -41,7 +48,9 @@ class Store{
             tax: tax,
             total: total,
             createdAt: date,
+            receipt: receipt
         }
+        storage.add('purchases', purchase)
         return {purchase};
     }
 }

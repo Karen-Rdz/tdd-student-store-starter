@@ -7,6 +7,8 @@ export default function CheckoutForm({
   checkoutForm,
   handleOnCheckoutFormChange,
   handleOnSubmitCheckoutForm,
+  purchase,
+  products,
 }) {
   return (
     <div className="checkout-form">
@@ -16,7 +18,9 @@ export default function CheckoutForm({
         name="email"
         placeholder="student@codepath.org"
         value={checkoutForm.email}
-        onChange={() => handleOnCheckoutFormChange("email", value)}
+        onChange={(event) =>
+          handleOnCheckoutFormChange("email", event.target.value)
+        }
       />
       <input
         className="checkout-form-input"
@@ -24,11 +28,14 @@ export default function CheckoutForm({
         name="name"
         placeholder="Student Name"
         value={checkoutForm.name}
-        onChange={() => handleOnCheckoutFormChange("name", value)}
+        onChange={(event) =>
+          handleOnCheckoutFormChange("name", event.target.value)
+        }
       />
       <button className="checkout-button" onClick={handleOnSubmitCheckoutForm}>
         Checkout
       </button>
+      {purchase.purchase ? <p>{purchase.purchase.receipt}</p> : <p></p>}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 const express = require('express');
-const Store = require('../models/Store')
+const Store = require('../models/Store');
 
 const router = express.Router()
 
@@ -17,8 +17,7 @@ router.get('/store/:productId', function (req, res) {
 router.post('/store', function (req, res) {
     const shoppingCart = req.body.shoppingCart;
     const user = req.body.user;
-    let id = 0;
-    const purchase = Store.createPuchase(shoppingCart, user, id);
+    const purchase = Store.createPuchase(shoppingCart, user);
     res.status(201).send({purchase})
 })
 

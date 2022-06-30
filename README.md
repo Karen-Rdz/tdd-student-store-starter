@@ -19,7 +19,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 - [x] User can click the '+' button on a product cart to increment that product in the shopping cart.
 - [x] User can click the '-' button on a product cart to decrement that product in the shopping cart.
 - [x] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
-- [ ] User can check out, and can view receipt upon completion.
+- [x] User can check out, and can view receipt upon completion.
 
 #### Stretch Features
 
@@ -258,7 +258,7 @@ The following specifications were met on the Express backend and the React front
 - [x] It should respond to `GET` requests to `/store` with an array of all products in the store in this format: `{ "products": products }`
 - [x] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
 - [ ] It should allow `POST` requests to the `/store` endpoint:
-  - [ ] The endpoint should create purchase orders for users and save them to the `db.json` file
+  - [x] The endpoint should create purchase orders for users and save them to the `db.json` file
   - [x] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
     - [x] The `shoppingCart` field should contain the user's order.
       - [x] This should be an array of objects.
@@ -272,14 +272,14 @@ The following specifications were met on the Express backend and the React front
     - [ ] If either the `quantity` or `itemId` field is missing for any of the items in the `shoppingCart`, a `400` error should be thrown.
     - [x] When both are there, it should calculate the total cost of all the items (including quantities), add a `8.75%` tax to the total, and create a new purchase object containing 6 required fields and 1 optional field:
       - **required**:
-        - [ ] `id` - the new `id` of the purchase should be equal to one more than the current number of existing purchases
-        - [ ] `name` - the name of the user making the purchase
-        - [ ] `email` - the email of the user making the purchase
+        - [x] `id` - the new `id` of the purchase should be equal to one more than the current number of existing purchases
+        - [x] `name` - the name of the user making the purchase
+        - [x] `email` - the email of the user making the purchase
         - [x] `order` - the `shoppingCart` value sent in the `POST` request
         - [x] `total` - the calculated total of the order
         - [x] `createdAt` - a string representation of the date and time when the order was placed
       - **optional**:
-        - [ ] `receipt` - text describing the order (what might go on a receipt)
+        - [x] `receipt` - text describing the order (what might go on a receipt)
     - [x] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
 
 ---

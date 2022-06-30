@@ -34,6 +34,8 @@ export default function Sidebar({
             checkoutForm={checkoutForm}
             handleOnCheckoutFormChange={handleOnCheckoutFormChange}
             handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+            purchase={purchase}
+            products={products}
           />
         </>
       ) : (
