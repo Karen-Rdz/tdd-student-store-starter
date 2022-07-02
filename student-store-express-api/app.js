@@ -1,5 +1,5 @@
 const express = require('express')
-const morgan = require('morgan')
+// const morgan = require('morgan')
 // const bodyParser = require('body-parser')
 const storeRoutes = require('./routes/Store.js')
 
@@ -8,7 +8,7 @@ const app = express()
 
 // app.use(bodyParser.json())
 app.use(express.json())
-app.use(morgan('tiny'))
+// app.use(morgan('tiny'))
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from

@@ -11,13 +11,14 @@ import NotFound from "../NotFound/NotFound";
 
 export default function App() {
   const [isFetching, setIsFetching] = React.useState(false);
-  const [error, setError] = React.useState(false);
+  const [error, setError] = React.useState("");
   const [isOpen, setIsOpen] = React.useState(true);
   const [shoppingCart, setShoppingCart] = React.useState([]);
   const [checkoutForm, setCheckoutForm] = React.useState({});
   const [products, setProducts] = React.useState([]);
   const [purchase, setPurchase] = React.useState({});
   let [widthSideBar, setWidth] = React.useState(80);
+  const [quantity, setQuantity] = React.useState(0);
 
   React.useEffect(() => {
     async function fetchData() {
@@ -25,7 +26,7 @@ export default function App() {
         const { data } = await axios.get("http://localhost:3001/store");
         setProducts(data.products);
       } catch (error) {
-        console.log(error.message);
+        setError("Not Products Found");
       }
     }
     fetchData();
@@ -92,9 +93,20 @@ export default function App() {
         shoppingCart: shoppingCart,
       })
       .then((response) => {
+        setShoppingCart([]);
+        setCheckoutForm({});
         setPurchase(response.data.purchase);
       });
   };
+
+  const calculateQuantity = (shoppingCart, productId) => {
+    shoppingCart.map((item) => {
+      if (item.itemId == productId) {
+        setQuantity(item.quantity);
+      }
+    });
+  };
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -119,6 +131,9 @@ export default function App() {
                   products={products}
                   handleAddItemToCart={handleAddItemToCart}
                   handleRemoveItemToCart={handleRemoveItemToCart}
+                  shoppingCart={shoppingCart}
+                  calculateQuantity={calculateQuantity}
+                  quantity={quantity}
                 />
               }
             />
@@ -128,6 +143,9 @@ export default function App() {
                 <ProductDetail
                   handleAddItemToCart={handleAddItemToCart}
                   handleRemoveItemToCart={handleRemoveItemToCart}
+                  shoppingCart={shoppingCart}
+                  calculateQuantity={calculateQuantity}
+                  quantity={quantity}
                 />
               }
             />

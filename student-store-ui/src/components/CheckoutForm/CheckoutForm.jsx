@@ -35,7 +35,14 @@ export default function CheckoutForm({
       <button className="checkout-button" onClick={handleOnSubmitCheckoutForm}>
         Checkout
       </button>
-      {purchase.purchase ? <p>{purchase.purchase.receipt}</p> : <p></p>}
+      {purchase.purchase ? (
+        <>
+          <p className="success">Success!</p>
+          <p>{purchase.purchase.receipt}</p>
+        </>
+      ) : (
+        <p className="erorr">Not checout yet</p>
+      )}
     </div>
   );
 }

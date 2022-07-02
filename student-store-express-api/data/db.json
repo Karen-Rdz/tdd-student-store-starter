@@ -190,6 +190,440 @@
         "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
         "Before taxes, the subtotal was: $2.49. \n        The taxes were: $0.22. \n        The total comes out: $2.71. "
       ]
+    },
+    {
+      "id": 3,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-06-30T22:27:27.622Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "subtotal": 1.98,
+      "tax": 0.17325,
+      "total": 2.15325,
+      "createdAt": "2022-06-30T22:29:17.670Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "2 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $1.98 ",
+        "Before taxes, the subtotal was: $1.98. \n        The taxes were: $0.17. \n        The total comes out: $2.15. "
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 2.49,
+      "tax": 0.217875,
+      "total": 2.707875,
+      "createdAt": "2022-06-30T22:31:20.602Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
+        "Before taxes, the subtotal was: $2.49. \n        The taxes were: $0.22. \n        The total comes out: $2.71. "
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 2.49,
+      "tax": 0.217875,
+      "total": 2.707875,
+      "createdAt": "2022-07-01T23:52:20.032Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
+        "Before taxes, the subtotal was: $2.49. \n        The taxes were: $0.22. \n        The total comes out: $2.71. "
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 2.49,
+      "tax": 0.217875,
+      "total": 2.707875,
+      "createdAt": "2022-07-01T23:52:47.252Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
+        "Before taxes, the subtotal was: $2.49. \n        The taxes were: $0.22. \n        The total comes out: $2.71. "
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-01T23:54:51.242Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": "1",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-01T23:55:58.565Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-01T23:56:46.492Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-01T23:58:31.779Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1.5,
+      "tax": 0.13124999999999998,
+      "total": 1.63125,
+      "createdAt": "2022-07-01T23:59:52.001Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
+        "Before taxes, the subtotal was: $1.50. \n        The taxes were: $0.13. \n        The total comes out: $1.63. "
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-02T00:00:19.130Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-02T00:01:26.927Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-02T00:02:15.930Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 2.49,
+      "tax": 0.217875,
+      "total": 2.707875,
+      "createdAt": "2022-07-02T00:03:04.896Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
+        "Before taxes, the subtotal was: $2.49. \n        The taxes were: $0.22. \n        The total comes out: $2.71. "
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-02T00:05:31.297Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 18,
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1.5,
+      "tax": 0.13124999999999998,
+      "total": 1.63125,
+      "createdAt": "2022-07-02T00:07:49.456Z",
+      "receipt": [
+        "Showing receipt for undefined available at undefined:",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
+        "Before taxes, the subtotal was: $1.50. \n        The taxes were: $0.13. \n        The total comes out: $1.63. "
+      ]
+    },
+    {
+      "id": 19,
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1.5,
+      "tax": 0.13124999999999998,
+      "total": 1.63125,
+      "createdAt": "2022-07-02T00:08:07.687Z",
+      "receipt": [
+        "Showing receipt for undefined available at undefined:",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
+        "Before taxes, the subtotal was: $1.50. \n        The taxes were: $0.13. \n        The total comes out: $1.63. "
+      ]
+    },
+    {
+      "id": 20,
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1.5,
+      "tax": 0.13124999999999998,
+      "total": 1.63125,
+      "createdAt": "2022-07-02T00:08:28.102Z",
+      "receipt": [
+        "Showing receipt for undefined available at undefined:",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.50 \n                for a total cost of $1.50 ",
+        "Before taxes, the subtotal was: $1.50. \n        The taxes were: $0.13. \n        The total comes out: $1.63. "
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-02T00:17:17.057Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": "1",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 0.99,
+      "tax": 0.086625,
+      "total": 1.076625,
+      "createdAt": "2022-07-02T00:18:09.660Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "1 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $0.99 ",
+        "Before taxes, the subtotal was: $0.99. \n        The taxes were: $0.09. \n        The total comes out: $1.08. "
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Karen Rodriguez",
+      "email": "karen.rdz.h@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 8
+        }
+      ],
+      "subtotal": 7.92,
+      "tax": 0.693,
+      "total": 8.613,
+      "createdAt": "2022-07-02T00:33:23.260Z",
+      "receipt": [
+        "Showing receipt for Karen Rodriguez available at karen.rdz.h@gmail.com:",
+        "8 total Rice Krispies purchased at a cost of $0.99 \n                for a total cost of $7.92 ",
+        "Before taxes, the subtotal was: $7.92. \n        The taxes were: $0.69. \n        The total comes out: $8.61. "
+      ]
     }
   ]
 }

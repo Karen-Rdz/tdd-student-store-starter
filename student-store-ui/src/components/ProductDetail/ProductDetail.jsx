@@ -8,6 +8,9 @@ import NotFound from "../NotFound/NotFound";
 export default function ProductDetail({
   handleAddItemToCart,
   handleRemoveItemToCart,
+  shoppingCart,
+  calculateQuantity,
+  quantity,
 }) {
   let [product, setProduct] = React.useState(undefined);
   let [loading, setLoading] = React.useState(true);
@@ -43,7 +46,7 @@ export default function ProductDetail({
         <ProductView
           product={product}
           productId={productId}
-          quantity={1}
+          quantity={quantity}
           handleAddItemToCart={handleAddItemToCart}
           handleRemoveItemToCart={handleRemoveItemToCart}
         />

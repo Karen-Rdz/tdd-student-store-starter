@@ -9,6 +9,9 @@ export default function ProductGrid({
   search,
   handleAddItemToCart,
   handleRemoveItemToCart,
+  shoppingCart,
+  calculateQuantity,
+  quantity,
 }) {
   let filteredProducts = [];
 
@@ -24,22 +27,24 @@ export default function ProductGrid({
       } else if (product.name.toLowerCase().includes(search)) {
         filteredProducts.push(product);
       }
+      // calculateQuantity(shoppingCart, product.id);
     });
   }
   filterProducts(products, category, search);
 
   return (
-    // <section className="sidebar">
     <div className="product-grid">
       {filteredProducts.map((product) => (
         <ProductCard
           key={product.name}
           product={product}
           productId={product.id}
-          quantity={1}
           handleAddItemToCart={handleAddItemToCart}
           handleRemoveItemToCart={handleRemoveItemToCart}
           showDescription={false}
+          shoppingCart={shoppingCart}
+          quantity={quantity}
+          calculateQuantity={calculateQuantity}
         />
       ))}
     </div>

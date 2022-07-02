@@ -1,14 +1,17 @@
 import * as React from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
 
 export default function ProductCard({
   product,
   productId,
-  quantity,
   handleAddItemToCart,
   handleRemoveItemToCart,
   showDescription,
+  shoppingCart,
+  quantity,
+  calculateQuantity,
 }) {
   if (product) {
     let description = "";
@@ -16,6 +19,7 @@ export default function ProductCard({
       description = product.description;
     }
     let price = product.price?.toFixed(2);
+    calculateQuantity(shoppingCart, productId);
     return (
       <div className="product-card">
         <h3 className="product-name">{product.name}</h3>

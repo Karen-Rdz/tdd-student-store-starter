@@ -16,7 +16,6 @@ class Storage {
 
   add(key, value) {
     this.db.get(key).push(value).write()
-    // return this.db.set(key, value)
   }
 
   get(key) {

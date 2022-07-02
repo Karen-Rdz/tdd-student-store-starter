@@ -1,6 +1,7 @@
 const {storage} = require('../data/storage.js');
 const products = storage.get('products');
 const purchases = storage.get('purchases');
+const {BadRequestError, NotFoundError} = require('../utils/errors.js')
 
 class Store{
     constructor(){
@@ -19,10 +20,13 @@ class Store{
     static createPuchase (shoppingCart, user){
         let subtotal = 0
         let costsOnCart = []
+        let itemsId = []
         let receipt = [`Showing receipt for ${user.name} available at ${user.email}:`]
+        if (shoppingCart.length == 0 || user.name == undefined) { throw new NotFoundError() }
         shoppingCart.forEach((item) => {
             products.forEach((element) => {
               if (element.id == item.itemId) {
+                itemsId.push(item.itemId)
                 costsOnCart.push(element.price * item.quantity);
                 receipt.push(`${item.quantity} total ${element.name} purchased at a cost of $${element.price.toFixed(2)} 
                 for a total cost of $${(element.price * item.quantity).toFixed(2)
@@ -33,6 +37,8 @@ class Store{
         costsOnCart.forEach((item) => {
             subtotal += item;
         });
+        const uniqueIds = new Set(itemsId)
+        if (uniqueIds.size !== shoppingCart.length) { throw new NotFoundError() }
         let tax = subtotal*0.0875
         let total = subtotal+tax
         let date = new Date()

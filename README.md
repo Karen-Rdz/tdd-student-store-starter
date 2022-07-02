@@ -56,10 +56,10 @@ The following specifications were met on the Express backend and the React front
       - [x] The `itemId` field should store the `id` of the item being purchased.
       - [x] The `quantity` field should store a number representing how many of that item the user is purchasing.
   - [x] `checkoutForm` - the user's information that will be sent to the API when they checkout.
-- [ ] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
+- [x] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
   - [x] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
   - [x] When the request completes successfully, it should store the `products` returned by the response in state.
-  - [ ] If the request does not complete successfully, or there are no `products` found in the response,
+  - [x] If the request does not complete successfully, or there are no `products` found in the response,
         it should create an error message and store it in the `error` state variable.
 - [x] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
   - [x] Define as many as are needed.
@@ -235,11 +235,11 @@ The following specifications were met on the Express backend and the React front
 - [x] Should render a `button` element with the `className` of `checkout-button`.
   - [x] It should contain the text `Checkout`.
   - [x] When clicked, it should call the `handleOnSubmit` function.
-    - [ ] If that request fails, the `CheckoutForm` component should display an error message inside an element with the `className` of `error`.
-    - [ ] If the `POST` request is successful...
-      - [ ] The `CheckoutForm` component should display a success message that contains the text `"Success!"` inside an element with the `className` of `success`.
-      - [ ] The `shoppingCart` should be emptied
-      - [ ] The `checkoutForm` should be reset to its default state.
+    - [x] If that request fails, the `CheckoutForm` component should display an error message inside an element with the `className` of `error`.
+    - [x] If the `POST` request is successful...
+      - [x] The `CheckoutForm` component should display a success message that contains the text `"Success!"` inside an element with the `className` of `success`.
+      - [x] The `shoppingCart` should be emptied
+      - [x] The `checkoutForm` should be reset to its default state.
 
 **Server** - Create an Express server
 
@@ -257,7 +257,7 @@ The following specifications were met on the Express backend and the React front
 
 - [x] It should respond to `GET` requests to `/store` with an array of all products in the store in this format: `{ "products": products }`
 - [x] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
-- [ ] It should allow `POST` requests to the `/store` endpoint:
+- [x] It should allow `POST` requests to the `/store` endpoint:
   - [x] The endpoint should create purchase orders for users and save them to the `db.json` file
   - [x] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
     - [x] The `shoppingCart` field should contain the user's order.
@@ -267,9 +267,9 @@ The following specifications were met on the Express backend and the React front
         - [x] The `itemId` field should store the `id` of the item being purchased
         - [x] The `quantity` field should store a number representing how many of that item the user is purchasing.
     - [x] The `user` field should contain the name and email of the person placing the order.
-    - [ ] When either the `shoppingCart` or `user` fields are missing, it should throw a `400` error.
-    - [ ] If there are duplicate items in the `shoppingCart`, it should throw a `400` error.
-    - [ ] If either the `quantity` or `itemId` field is missing for any of the items in the `shoppingCart`, a `400` error should be thrown.
+    - [x] When either the `shoppingCart` or `user` fields are missing, it should throw a `400` error.
+    - [x] If there are duplicate items in the `shoppingCart`, it should throw a `400` error.
+    - [x] If either the `quantity` or `itemId` field is missing for any of the items in the `shoppingCart`, a `400` error should be thrown.
     - [x] When both are there, it should calculate the total cost of all the items (including quantities), add a `8.75%` tax to the total, and create a new purchase object containing 6 required fields and 1 optional field:
       - **required**:
         - [x] `id` - the new `id` of the purchase should be equal to one more than the current number of existing purchases
